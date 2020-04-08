@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-geoobjects.yaml
+  - changeSet:
+      id: 1
+      author: geo_postgress
+      changes:
+        - createTable:
+            tableName: geoobjects
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: lat
+                  type: FLOAT
+              - column:
+                  name: lng
+                  type: FLOAT
+
